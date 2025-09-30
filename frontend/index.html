@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn2Automate Practice Site</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1 data-test-id="page-title">Welcome to Learn2Automate</h1>
+
+  <h2>Form Elements</h2>
+  <form>
+    <label>Name: <input type="text" data-test-id="input-name"></label><br><br>
+    <label>Email: <input type="email" data-test-id="input-email"></label><br><br>
+    <label>Password: <input type="password" data-test-id="input-password"></label><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male" data-test-id="radio-male"> Male
+    <input type="radio" name="gender" value="female" data-test-id="radio-female"> Female<br><br>
+
+    <label>
+      <input type="checkbox" data-test-id="checkbox-newsletter"> Subscribe to Newsletter
+    </label><br><br>
+
+    <label for="dropdown" data-test-id="label-dropdown">Choose a course:</label>
+    <select id="dropdown" data-test-id="dropdown-course">
+      <option value="selenium">Selenium</option>
+      <option value="playwright">Playwright</option>
+      <option value="cypress">Cypress</option>
+    </select><br><br>
+
+    <button type="submit" data-test-id="btn-submit">Submit</button>
+  </form>
+
+  <h2>Dynamic Elements</h2>
+  <button onclick="alert('This is an alert!')" data-test-id="btn-alert">Show Alert</button>
+  <button onclick="document.getElementById('hidden-text').style.display='block'" data-test-id="btn-show-hidden">Show Hidden</button>
+  <p id="hidden-text" style="display:none" data-test-id="hidden-text">You found me!</p>
+
+  <h2>Table</h2>
+  <table border="1" data-test-id="table-data">
+    <tr><th>ID</th><th>Name</th><th>Course</th></tr>
+    <tr><td>1</td><td>Alice</td><td>Selenium</td></tr>
+    <tr><td>2</td><td>Bob</td><td>Playwright</td></tr>
+    <tr><td>3</td><td>Charlie</td><td>Cypress</td></tr>
+  </table>
+
+  <h2>Hover Element</h2>
+  <div style="width:200px;height:50px;background:lightblue" data-test-id="hover-box"
+       onmouseover="document.getElementById('hover-text').style.display='block'">
+    Hover over me
+  </div>
+  <p id="hover-text" style="display:none" data-test-id="hover-text">Hovered!</p>
+
+</body>
+</html>
